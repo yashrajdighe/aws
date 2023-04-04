@@ -7,7 +7,7 @@
    2. k8s.io/cluster-autoscaler/enabled: true
 2. Create an IAM policy which grants permissions that cluster autoscaler requires to use an IAM role.
 ```json
-   {
+{
     "Version": "2012-10-17",
     "Statement": [
         {
