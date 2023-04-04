@@ -83,8 +83,10 @@ aws iam create-policy \
    kubectl -n kube-system edit deployment.apps/cluster-autoscaler
    ```
    7. Add below 2 commands in container command:
-      1. --balance-similar-node-groups
-      2. --skip-nodes-with-system-pods=false
+      ```console
+      --balance-similar-node-groups
+      --skip-nodes-with-system-pods=false
+      ```
    8. If you want to update the cluster autoscaler deployment image, run the below command:
    ```console
    kubectl set image deployment cluster-autoscaler \
