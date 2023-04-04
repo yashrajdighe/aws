@@ -61,7 +61,7 @@ aws iam create-policy \
    ```console
    curl -O https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
    ```
-   2. Modify <YOUR CLUSTER NAME> with your cluster name
+   2. Modify YOUR-CLUSTER-NAME with your cluster name
    3. Apply the manifest
    ```console
    kubectl apply -f cluster-autoscaler-autodiscover.yaml
@@ -90,4 +90,10 @@ aws iam create-policy \
    kubectl set image deployment cluster-autoscaler \
    -n kube-system \
    cluster-autoscaler=registry.k8s.io/autoscaling/cluster-autoscaler:v1.25.n
+   ```
+
+### Notes
+1. If you are using Amazon Linux Worker Nodes or Debian, you have to update the **volumeMounts** **mouthPath** to
+   ```console
+   /etc/ssl/certs/ca-bundle.crt
    ```
