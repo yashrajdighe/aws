@@ -5,7 +5,7 @@
 1. Add tags to your Auto Scaling Groups with following tags:
    1. k8s.io/cluster-autoscaler/***CLUSTER-NAME***: owned
    2. k8s.io/cluster-autoscaler/enabled: true
-2. Create an IAM policy which grants permissions that cluster autoscaler requires to use an IAM role.
+2. Create an IAM policy which grants permissions that cluster autoscaler requires to use an IAM role. Update the **CLUSTER-NAME** with your cluster name.
 ```json
 {
     "Version": "2012-10-17",
