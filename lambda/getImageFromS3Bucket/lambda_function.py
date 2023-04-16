@@ -18,7 +18,6 @@ def lambda_handler(event, context):
         return {"statusCode": 500, "body": json.dumps("Error processing the request!")}
 
 
-# TODO Rename this here and in `lambda_handler`
 def extract_image_from_s3_bucket(event, bucket_name):
     s3 = boto3.client("s3")
     folder_name = event["queryStringParameters"]["FOLDER_NAME"]
